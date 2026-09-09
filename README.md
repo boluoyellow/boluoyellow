@@ -1,5 +1,7 @@
 ## 哈喽 👋
 
+这里是存放软工课作业用到的各种ai代打代码的仓库
+
 <!--
 **boluoyellow/boluoyellow** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
