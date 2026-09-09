@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>FLUX 图像生成器</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.12);
+        }
+
+        textarea {
+            width: 90%;
+            height: 100px;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 90%;
+            border-radius: 10px;
+        }
+
+        .message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>FLUX 真实图像生成器</h1>
+
+    <p>模型：XLabs-AI/flux-RealismLora</p>
+
+    <form method="POST">
+
+        <p>请输入图像提示词：</p>
+
+       <textarea
+    name="prompt"
+    required
+    placeholder="请输入英文提示词">{{ prompt }}</textarea>
+
+        <br>
+
+        <button type="submit">
+            生成图像
+        </button>
+
+    </form>
+
+    <div class="message">
+        {{ message }}
+    </div>
+
+    {% if image_generated %}
+
+        <h2>生成结果</h2>
+
+        <img src="/static/result.png">
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>
